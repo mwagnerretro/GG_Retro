@@ -1,0 +1,18 @@
+# The following program generates a guessing game.
+import random
+
+computer_number = random.randint(0, 99)
+
+while True:
+    answer = input("Guess the number: ")
+    try:
+        guess = int(answer)
+        if guess == computer_number:
+            print("You got it!")
+            break
+        elif guess > computer_number:
+            print("Your guess is too high.")
+        else:
+            print("Your guess is too low.")
+    except ValueError:
+        print("Please enter a valid number.")
